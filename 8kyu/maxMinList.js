@@ -16,15 +16,13 @@ function min(list)
     let minVal = 0;
     
     for (let index = 0; index < list.length; index++) {
-        const element = list[index];
-        
-        
-        if (minVal > list[index])
+               
+        if (list[minVal] >= list[index])
         {
-            minVal = list[index]
+            minVal = index
         }
     }
-console.log('min = ', minVal)
+return list[minVal]
 }
 
 function max(list)
@@ -33,16 +31,11 @@ function max(list)
     let maxVal = 0;
     
     for (let index = 0; index < list.length; index++) {
-        const element = list[index];
         
-        
-        if (maxVal > list[index])
+        if (list[maxVal] <= list[index])
         {
-            maxVal = list[index]
+            maxVal = index
         }
     }
-console.log('max = ', maxVal)
+return list[maxVal]
 }
-
-min()
-max()
